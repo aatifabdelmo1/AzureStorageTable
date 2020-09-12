@@ -14,12 +14,12 @@ namespace AzureCashCDN.IRepository.Repository
     public class ClassRepository : IClass
     {
         private readonly SchoolContext _db;
-        private readonly IDistributedCache _Cache;
+        //private readonly IDistributedCache _Cache;
 
-        public ClassRepository(SchoolContext db, IDistributedCache Cache)
+        public ClassRepository(SchoolContext db)
         {
             _db = db;
-            _Cache = Cache;
+            //_Cache = Cache;
         }
 
         public async Task<bool> CreateClass(Class Cl)
