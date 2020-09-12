@@ -1,0 +1,37 @@
+﻿@model BlobStorage.Models.Video
+
+@{
+    ViewData["Title"] = "UploadVideo";
+}
+
+<h1>UploadVideo</h1>
+
+<h4>Video</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UploadVideo" enctype="multipart/form-data" >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="ContainerName" class="control-label"></label>
+                <input asp-for="ContainerName" class="form-control" />
+                <span asp-validation-for="ContainerName" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label title="Upload Video" class="control-label"></label>
+                <input type="file" name="file" id="file" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

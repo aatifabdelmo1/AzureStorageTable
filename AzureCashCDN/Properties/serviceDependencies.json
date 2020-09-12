@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "DefaultConnection"
+    },
+    "redis1": {
+      "type": "redis",
+      "connectionId": "CacheConnection"
+    }
+  }
+}
